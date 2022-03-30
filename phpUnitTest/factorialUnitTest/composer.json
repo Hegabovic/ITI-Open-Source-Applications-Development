@@ -1,0 +1,22 @@
+{
+  "name": "vendor_name/factorialunittest",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "hegabovic",
+      "email": "hegabovic@gmail.com"
+    }
+  ],
+  "require": {
+    "phpunit/phpunit": "9.5.19"
+
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "classes"
+    }
+  }
+
+}
