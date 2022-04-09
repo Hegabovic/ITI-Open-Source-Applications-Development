@@ -1,0 +1,19 @@
+#!/bin/bash
+########################### insert data into database
+############ files:-
+####			$1 : invoice.txt
+####			$2 : invoice_data.txt
+USER=root
+PASS=Hegabo192
+DB_NAME = invoices
+TABLE = invoice
+awk -F":" '{id=$1}' $1
+awk -F":" '{customer=$2}' $1
+awk -F":" '{price=$3}' $1
+
+mysql -u${USER} -p${PASS} -e "insert into invoices.invoice VALUES(${id},${customer},${price})"
+
+
+mysql --user=$USER --password=$PASS $DB_NAME << EOF
+INSERT INTO $TABLE (\\`, \`day\`, \`time\`, \`rank\`) VALUES (NULL, "$day", "$time", "$rank");
+EOF

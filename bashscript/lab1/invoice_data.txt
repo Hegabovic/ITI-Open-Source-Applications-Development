@@ -1,0 +1,4 @@
+1 camera 300
+2 laptop 400
+3 microwave 500
+4 oven 600
